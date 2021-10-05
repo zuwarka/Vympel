@@ -9,11 +9,6 @@
 
 using namespace std;
 
-//константы по условию
-//const double k = 0.07436574; //постоянная, равная корню произведению графитационной постоянной на массу Земли (Э.Р/МИН)
-//const double pi = 3.14159265;
-//const double mu = 1.000952348;
-
 int main()
 {
 	//-----------------------------------------------------------ПЕРЕМЕННЫЕ
@@ -28,9 +23,9 @@ int main()
 	int c;
 	cout << "Gauss method for finding orbit - console version" << endl;
 	cout << "How you going to input data?" << endl;
-	cout << "1 - Manually" << endl;
-	cout << "2 - From file" << endl;
-	cout << "0 - Exit" << endl;
+	cout << " 1 - Manually" << endl;
+	cout << " 2 - From file" << endl;
+	cout << " 0 - Exit" << endl;
 	cout << "-> ";
 	cin >> c;
 
@@ -73,12 +68,30 @@ int main()
 
 		if (!infile)
 		{
-			cout << "Ошибка открытия файла!" << endl;
+			cout << "Error opening!" << endl;
 			exit(1);
 		}
 
+		cout << "Getting values..." << endl;
+		infile >> value;
+		r1_vec.set_x(value);
+		infile >> value;
+		r1_vec.set_y(value);
+		infile >> value;
+		r1_vec.set_z(value);
+		infile >> value;
+		r2_vec.set_x(value);
+		infile >> value;
+		r2_vec.set_y(value);
+		infile >> value;
+		r2_vec.set_z(value);
+		infile >> value;
+		t1 = value;
+		infile >> value;
+		t2 = value;
 
 		infile.close();
+		r_res = gauss_counting(r1_vec, r2_vec, t1, t2);
 		break;	
 	case 0:
 		exit(0);
