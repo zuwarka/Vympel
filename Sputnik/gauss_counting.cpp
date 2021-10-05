@@ -8,7 +8,7 @@ const double k = 0.07436574; //постоянная, равная корню п�
 const double pi = 3.14159265;
 const double mu = 1.000952348;
 
-const double N = 10;
+const double N = 10; //заданная точность
 
 Vector gauss_counting(Vector& r1_vec, Vector& r2_vec, double& t1, double& t2)
 {
