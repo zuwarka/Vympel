@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
-//Класс вектор. Реализовать: три точки, точка зед по умолчанию пусть будет равна нулю
-//перегрузить сложение, вычитание, скалярное и векторное произведения. 
+//РљР»Р°СЃСЃ РІРµРєС‚РѕСЂ. Р РµР°Р»РёР·РѕРІР°С‚СЊ: С‚СЂРё С‚РѕС‡РєРё, С‚РѕС‡РєР° Р·РµРґ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ РїСѓСЃС‚СЊ Р±СѓРґРµС‚ СЂР°РІРЅР° РЅСѓР»СЋ
+//РїРµСЂРµРіСЂСѓР·РёС‚СЊ СЃР»РѕР¶РµРЅРёРµ, РІС‹С‡РёС‚Р°РЅРёРµ, СЃРєР°Р»СЏСЂРЅРѕРµ Рё РІРµРєС‚РѕСЂРЅРѕРµ РїСЂРѕРёР·РІРµРґРµРЅРёСЏ. 
 
 class Vector
 {
@@ -22,10 +22,10 @@ public:
 	double length() const;
 
 	Vector& operator= (const Vector& r);
-	friend Vector operator^ (const double& num, const Vector& r_op); //умножение вектора на число
-	friend Vector operator+ (const Vector& l_op, const Vector& r_op); //векторная сумма
-	friend Vector operator- (const Vector& l_op, const Vector& r_op); //векторное вычитание
-	friend double operator* (const Vector& l_op, const Vector& r_op); //скалярное проиведение
+	friend Vector operator^ (const double& num, const Vector& r_op); //СѓРјРЅРѕР¶РµРЅРёРµ РІРµРєС‚РѕСЂР° РЅР° С‡РёСЃР»Рѕ
+	friend Vector operator+ (const Vector& l_op, const Vector& r_op); //РІРµРєС‚РѕСЂРЅР°СЏ СЃСѓРјРјР°
+	friend Vector operator- (const Vector& l_op, const Vector& r_op); //РІРµРєС‚РѕСЂРЅРѕРµ РІС‹С‡РёС‚Р°РЅРёРµ
+	friend double operator* (const Vector& l_op, const Vector& r_op); //СЃРєР°Р»СЏСЂРЅРѕРµ РїСЂРѕРёРІРµРґРµРЅРёРµ
 
 	friend std::ostream& operator<< (std::ostream& out, const Vector& vector);
 };
