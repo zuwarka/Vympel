@@ -20,12 +20,6 @@ int main()
 	double value; //то, куда мы вводим
 	double t1, t2; //моменты всемирного времени
 	Vector r1_vec, r2_vec, r_res; //радиус-векторы положения спутника
-	/*
-	double r1 = r1_vec.length(); //значение длины вектора r1
-	double r2 = r2_vec.length(); //значение длины вектора r2
-	double fi; //fi = u2 - u1. Это угол косинуса
-	double l, m, f, g; //постоянные гауссовского уравнения
-	*/
 	string basefile = "data.txt"; //файл с данными
 	ifstream infile; //чтение из файла
 	ofstream outfile; //запись в файл
@@ -49,20 +43,20 @@ int main()
 		cout << "\tvector r1:\tx = ";
 		cin >> value;
 		r1_vec.set_x(value);
-		cout << "\n\t          \ty = ";
+		cout << "\t          \ty = ";
 		cin >> value;
 		r1_vec.set_y(value);
-		cout << "\n\t          \tz = ";
+		cout << "\t          \tz = ";
 		cin >> value;
 		r1_vec.set_z(value);
 
-		cout << "\tvector r2:\tx = ";
+		cout << "\n\tvector r2:\tx = ";
 		cin >> value;
 		r2_vec.set_x(value);
-		cout << "\n\t          \ty = ";
+		cout << "\t          \ty = ";
 		cin >> value;
 		r2_vec.set_y(value);
-		cout << "\n\t          \tz = ";
+		cout << "\t          \tz = ";
 		cin >> value;
 		r2_vec.set_z(value);
 
@@ -76,12 +70,14 @@ int main()
 	case 2: //Из файла
 		system("cls");
 		infile.open(basefile);
+
 		if (!infile)
 		{
 			cout << "Ошибка открытия файла!" << endl;
 			exit(1);
 		}
-		//infile >> x_str >> k_str >> b_str >> x_ell >> a_ell >> b_ell >> x_hyp >> k_hyp >> b_hyp;
+
+
 		infile.close();
 		break;	
 	case 0:
@@ -91,6 +87,8 @@ int main()
 		break;
 	}
 
-
+	system("pause");
+	system("cls");
+	cout << "The orbit has been founded!\n\nr1 = (" << r1_vec << "), r2 = (" << r_res << ")\n";
 	return 0;
 }

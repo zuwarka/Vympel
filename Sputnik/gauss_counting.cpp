@@ -1,3 +1,4 @@
+#pragma warning(suppress : 4834)
 #include "gauss_counting.h"
 #include "Vector.h"
 #include <iostream>
