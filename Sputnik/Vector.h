@@ -28,4 +28,5 @@ public:
 	friend double operator* (const Vector& l_op, const Vector& r_op); //скалярное проиведение
 
 	friend std::ostream& operator<< (std::ostream& out, const Vector& vector);
+	//friend std::istream& operator>> (std::istream& in, Vector& vector)
 };
