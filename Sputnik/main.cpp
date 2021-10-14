@@ -81,6 +81,7 @@ int main()
 		if (!infile)
 		{
 			cout << "Error opening!" << endl;
+			system("pause");
 			exit(1);
 		}
 
@@ -143,6 +144,7 @@ int main()
 			if (!outfile)
 			{
 				cout << "Error opening!" << endl;
+				system("pause");
 				exit(1);
 			}
 
@@ -186,6 +188,7 @@ int main()
 			if (!outfile)
 			{
 				cout << "Error opening!" << endl;
+				system("pause");
 				exit(1);
 			}
 
@@ -209,5 +212,6 @@ int main()
 	}
 	system("cls");
 	cout << "The orbit has been founded!\n\nr1 = (" << r1_vec << "),\nr2 = (" << r_res << ")\n";
+	system("pause");
 	return 0;
 }
