@@ -71,7 +71,7 @@ Vector gauss_counting(Vector& r1_vec, Vector& r2_vec, long double& t1, long doub
 	r_point = (1 / g) ^ (r2_vec - (f ^ r1_vec));
 	//---------------------------------------------------------------------------------------БЛОК ПОДСЧЕТА
 	system_clock::time_point end = system_clock::now(); //конец измерения времени алгоритма
-	cout << "The time is: " << duration_cast<microseconds>(end - start).count() << endl;
+	cout << "The time is: " << duration_cast<microseconds>(end - start).count() << " us" << endl;
 	return r_point;
 }
 
