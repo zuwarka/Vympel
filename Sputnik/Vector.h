@@ -6,26 +6,26 @@
 class Vector
 {
 private:
-	double x, y, z; //three coordinates of radius-vector
+	long double x, y, z; //three coordinates of radius-vector
 public:
 	Vector();
 	~Vector();
 	Vector(const Vector& Vector_copy);
-	Vector(double x, double y, double z);
+	Vector(long double x, long double y, long double z);
 
-	double get_x() const;
-	double get_y() const;
-	double get_z() const;
-	void set_x(double& value);
-	void set_y(double& value);
-	void set_z(double& value);
-	double length() const;
+	long double get_x() const;
+	long double get_y() const;
+	long double get_z() const;
+	void set_x(long double& value);
+	void set_y(long double& value);
+	void set_z(long double& value);
+	long double length() const;
 
 	Vector& operator= (const Vector& r);
 	friend Vector operator^ (const double& num, const Vector& r_op); //умножение вектора на число
 	friend Vector operator+ (const Vector& l_op, const Vector& r_op); //векторная сумма
 	friend Vector operator- (const Vector& l_op, const Vector& r_op); //векторное вычитание
-	friend double operator* (const Vector& l_op, const Vector& r_op); //скалярное проиведение
+	friend long double operator* (const Vector& l_op, const Vector& r_op); //скалярное проиведение
 
 	friend std::ostream& operator<< (std::ostream& out, const Vector& vector);
 	//friend std::istream& operator>> (std::istream& in, Vector& vector)
