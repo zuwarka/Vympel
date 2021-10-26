@@ -56,7 +56,7 @@ void Menu::main_menu()
 
 int Menu::show_options_method()
 {
-	int c; //счетчики
+	int c; //СЃС‡РµС‚С‡РёРєРё
 	cout << "Gauss method for finding orbit - console version" << endl;
 	cout << "Instruction:" << endl;
 	cout << "1. All values has real type!" << endl;
@@ -109,9 +109,9 @@ void Menu::manually()
 
 void Menu::from_file()
 {
-	string basefile; //файл с данными
-	ifstream infile; //чтение из файла
-	ofstream outfile; //запись в файл
+	string basefile; //С„Р°Р№Р» СЃ РґР°РЅРЅС‹РјРё
+	ifstream infile; //С‡С‚РµРЅРёРµ РёР· С„Р°Р№Р»Р°
+	ofstream outfile; //Р·Р°РїРёСЃСЊ РІ С„Р°Р№Р»
 
 	cout << "Input file name: ";
 	cin >> basefile;
@@ -124,7 +124,7 @@ void Menu::from_file()
 		system("pause");
 		exit(1);
 	}
-	else //проверка файла на пустоту
+	else //РїСЂРѕРІРµСЂРєР° С„Р°Р№Р»Р° РЅР° РїСѓСЃС‚РѕС‚Сѓ
 	{
 		infile.seekg(0, ios::end);
 		if (infile.tellg() == 0)
@@ -194,9 +194,9 @@ int Menu::show_options_file()
 void Menu::add_new_values()
 {
 	int c;
-	string basefile; //файл с данными
-	ifstream infile; //чтение из файла
-	ofstream outfile; //запись в файл
+	string basefile; //С„Р°Р№Р» СЃ РґР°РЅРЅС‹РјРё
+	ifstream infile; //С‡С‚РµРЅРёРµ РёР· С„Р°Р№Р»Р°
+	ofstream outfile; //Р·Р°РїРёСЃСЊ РІ С„Р°Р№Р»
 	cout << "Input file name: ";
 	cin >> basefile;
 
