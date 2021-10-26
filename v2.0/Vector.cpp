@@ -32,29 +32,29 @@ long double Vector::length() const
 	return sqrt(this->x * this->x + this->y * this->y + this->z * this->z);
 }
 
-Vector operator+ (const Vector& l_op, const Vector& r_op) //векторная сумма
+Vector operator+ (const Vector& l_op, const Vector& r_op) //РІРµРєС‚РѕСЂРЅР°СЏ СЃСѓРјРјР°
 {
 	return Vector(l_op.x + r_op.x, l_op.y + r_op.y, l_op.z + r_op.z);
 }
 
-Vector operator- (const Vector& l_op, const Vector& r_op) //векторное вычитание
+Vector operator- (const Vector& l_op, const Vector& r_op) //РІРµРєС‚РѕСЂРЅРѕРµ РІС‹С‡РёС‚Р°РЅРёРµ
 {
 	return Vector(l_op.x - r_op.x, l_op.y - r_op.y, l_op.z - r_op.z);
 }
 
-Vector operator^ (const double& num, const Vector& r_op) //умножение вектора на число
+Vector operator^ (const double& num, const Vector& r_op) //СѓРјРЅРѕР¶РµРЅРёРµ РІРµРєС‚РѕСЂР° РЅР° С‡РёСЃР»Рѕ
 {
 	return Vector(num * r_op.x, num * r_op.y, num * r_op.z);
 }
 
-long double operator* (const Vector& l_op, const Vector& r_op) //скалярное проиведение
+long double operator* (const Vector& l_op, const Vector& r_op) //СЃРєР°Р»СЏСЂРЅРѕРµ РїСЂРѕРёРІРµРґРµРЅРёРµ
 {
 	return l_op.x * r_op.x + l_op.y * r_op.y + l_op.z * r_op.z;
 }
 
 Vector& Vector::operator= (const Vector& r)
 {
-	if (this == &r) //проерка на самоприсваивание
+	if (this == &r) //РїСЂРѕРµСЂРєР° РЅР° СЃР°РјРѕРїСЂРёСЃРІР°РёРІР°РЅРёРµ
 		return *this;
 	x = r.x; 
 	y = r.y; 
